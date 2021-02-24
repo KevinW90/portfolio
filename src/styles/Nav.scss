@@ -1,0 +1,42 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.menu-collapsed {
+  position: relative;
+  margin: 1.5em 3em;
+  width: 4em;
+  height: 6.2em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  transform: scale(.5) rotate(90deg);
+  margin: 0;
+  &::before,
+  &::after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+  }
+  &::before {
+    transform: rotate(60deg);
+  }
+  &::after {
+    transform: rotate(-60deg);
+  }
+
+  & .blah {
+    position: relative;
+    z-index: 2;
+    transform: scale(2) rotate(-90deg);
+  }
+}

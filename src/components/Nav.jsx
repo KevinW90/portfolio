@@ -1,6 +1,6 @@
-import {useWindowWidth} from '../hooks';
+import '../styles/Nav.scss';
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {useWindowWidth} from '../hooks';
 
 import LOGO from '../assets/LOGO.svg';
 import BARS from '../assets/bars.svg';
@@ -23,8 +23,8 @@ function Nav() {
 // collapsed menu component
 function CollapsedMenu() {
   return (
-    <div>
-      <img src={BARS} alt="menu" />
+    <div className="menu-collapsed">
+      <img className="blah" src={BARS} alt="menu" />
     </div>
   )
 }
