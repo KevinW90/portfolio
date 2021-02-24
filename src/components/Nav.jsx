@@ -1,12 +1,17 @@
 import {useWindowWidth} from '../hooks';
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+import LOGO from '../assets/LOGO.svg';
+import BARS from '../assets/bars.svg';
+
 function Nav() {
   const windowWidth = useWindowWidth();
 
   return (
     <nav>
       <div>
-        LOGO
+        <img src={LOGO} alt="logo" />
       </div>
 
       {windowWidth <= 600 ? <CollapsedMenu /> : <ExpandedMenu />}
@@ -19,7 +24,7 @@ function Nav() {
 function CollapsedMenu() {
   return (
     <div>
-      collapsed
+      <img src={BARS} alt="menu" />
     </div>
   )
 }
