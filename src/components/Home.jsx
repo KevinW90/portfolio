@@ -86,7 +86,7 @@ const data = [
   {
     color: '#EA7017',
     icon: faStar,
-    label: 'perfection',
+    label: 'perfect',
     text: `
     There’s no such thing as perfect, except there is. 
     And our next project could be just that. Reach out 
