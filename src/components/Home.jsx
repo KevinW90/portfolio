@@ -7,8 +7,8 @@ import { faUser,
 function Home() {
   return (
     <div className="home main-page">
-      {data.map((info) => {
-        return <Item key={info.label} {...info} />
+      {data.map((info, ndx) => {
+        return <Item key={info.label} {...info} ndx={ndx} />
       })}
     </div>
     
@@ -18,7 +18,7 @@ function Home() {
 export default Home;
 
 // home item component
-function Item({color, icon, label, text}) {
+function Item({color, icon, label, text, ndx}) {
   return (
     <div className="item">
       <div 
@@ -35,6 +35,15 @@ function Item({color, icon, label, text}) {
       
       <div className="item__text">
         {text}
+
+        {ndx === 3
+          ?
+          <button className="cta">
+            reach out
+          </button>
+          :
+          <></>
+        }
       </div>
     </div>
   )
