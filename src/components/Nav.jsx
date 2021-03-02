@@ -4,20 +4,20 @@ import LOGO from '../assets/LOGO.svg';
 
 function Nav() {
   return (
-    <nav>
-      <div>
+    <nav className="nav">
+      <div className="nav__logo">
         <img src={LOGO} alt="logo" />
       </div>
 
-      <ul className="menu">
-        <li>
-          <a href='#'>home</a>
+      <ul className="nav__menu">
+        <li className="nav__item">
+          <a className="nav__link" href='#'>home</a>
         </li>
-        <li>
-          <a href='#'>projects</a>
+        <li className="nav__item">
+          <a className="nav__link" href='#'>projects</a>
         </li>
-        <li>
-          <a href='#'>contact</a>
+        <li className="nav__item">
+          <a className="nav__link" href='#'>contact</a>
         </li>
       </ul>
     </nav>
