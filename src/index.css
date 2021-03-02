@@ -12,3 +12,5 @@ html, body, #root, .app {
 .app {
   background: #f1f1f1;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Truculenta:wght@100;400;700&display=swap');

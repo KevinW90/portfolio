@@ -14,12 +14,13 @@
   &__item {
     list-style-type: none;
     display: inline;
-    margin-left: 2em;
+    margin-left: 1em;
   }
 
   &__link {
     text-decoration: none;
     color: #444;
+    font-family: 'Fredoka One', cursive;
   }
 }
 
