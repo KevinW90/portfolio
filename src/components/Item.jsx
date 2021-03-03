@@ -79,12 +79,17 @@ function HomeItem({badge, text, ndx}) {
 }
 
 function ProjectItem({img, title, link, text, labels}) {
+  console.log(img);
   return (
     <div className="project-item">
-      <div className="project-item__img">
-        <img src={img} alt={title} />
+      <div>
+        <img 
+          src={img} 
+          alt={title}
+          className="project-item__img"
+        />
       </div>
-      
+
       <div className="project-item__words">
         <span className="project-item__title">
           {title} 
@@ -95,7 +100,11 @@ function ProjectItem({img, title, link, text, labels}) {
           }
         </span>
         
-        <p dangerouslySetInnerHTML={{__html: text}}></p>
+        <p 
+          dangerouslySetInnerHTML={{__html: text}}
+          className="project-item__text"
+        >
+        </p>
         
         <div className="project-item__tech-labels">
           {labels.map((label, ndx) => <span key={`${label}${ndx}`} className="project-item__tech-label">{label}</span>)}
