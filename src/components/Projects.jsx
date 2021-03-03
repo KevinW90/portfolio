@@ -22,7 +22,7 @@ const data = {
     {
       img: DD_img,
       title: 'Dungeon DOM',
-      link: '',
+      link: 'https://github.com/heykc/READMEDungeon',
       text: `
         Co-developing a rogue-lite dungeon-crawler. 
         The app is built in Vanilla JS with the Web 
@@ -38,7 +38,7 @@ const data = {
     {
       img: PF_img,
       title: 'Pie Felicia!',
-      link: '',
+      link: 'https://pie-felicia.vercel.app/',
       text: `
         A semi-functional mobile app concept for a 
         pie shop catering business. Horizontal scrolling 
@@ -53,7 +53,7 @@ const data = {
     {
       img: CS_img,
       title: 'cornerstone_coding',
-      link: '',
+      link: 'https://www.figma.com/file/DHad1hqKrpZNu4feY7We3Z/Website?node-id=1%3A7',
       text: `
         A website designed for my Discord server where I mentor 
         new programming students. It’s still in the development 
