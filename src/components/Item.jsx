@@ -7,6 +7,8 @@ import {
   faDiscord
 } from '@fortawesome/free-brands-svg-icons';
 
+import { Link } from 'react-router-dom';
+
 function Item({page, display}) {
   let badge;
 
@@ -80,9 +82,12 @@ function HomeItem({badge, text, ndx}) {
 
         {ndx === 3
           ?
-          <button className="cta">
-            reach out
-          </button>
+          <Link to="/contact">
+            <button className="cta">
+              reach out
+            </button>
+          </Link>
+          
           :
           <></>
         }
