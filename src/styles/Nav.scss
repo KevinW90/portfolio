@@ -6,6 +6,10 @@
   padding: 2em;
   background: white;
   box-shadow: 0 3px 3px 0 rgba(black, .2);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 5;
 
   &__menu {
     all: initial;
@@ -15,12 +19,18 @@
     list-style-type: none;
     display: inline;
     margin-left: 1em;
+
+    
   }
 
   &__link {
     text-decoration: none;
     color: #444;
     font-family: 'Fredoka One', cursive;
+
+    &--active {
+      color: #7018A7;
+    }
   }
 }
 

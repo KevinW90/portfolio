@@ -4,7 +4,7 @@ import LOGO from '../assets/LOGO.svg';
 
 import { Link } from 'react-router-dom';
 
-function Nav() {
+function Nav({link, changeLink}) {
   return (
     <nav className="nav">
       <div className="nav__logo">
@@ -12,14 +12,26 @@ function Nav() {
       </div>
 
       <ul className="nav__menu">
-        <li className="nav__item">
-          <Link to="/" className="nav__link">home</Link>
+        <li className="nav__item" >
+          <Link to="/" 
+                className={`nav__link ${link === 'home' ? 'nav__link--active' : ''}`} 
+                onClick={() => changeLink('home')}>
+            home
+          </Link>
         </li>
-        <li className="nav__item">
-          <Link to="/projects" className="nav__link">projects</Link>
+        <li className="nav__item" onClick={() => changeLink('projects')}>
+          <Link to="/projects" 
+                className="nav__link"
+                className={`nav__link ${link === 'projects' ? 'nav__link--active' : ''}`}>
+            projects
+          </Link>
         </li>
-        <li className="nav__item">
-          <Link to="/contact" className="nav__link">contact</Link>
+        <li className="nav__item" onClick={() => changeLink('contact')}>
+          <Link to="/contact" 
+                className="nav__link"
+                className={`nav__link ${link === 'contact' ? 'nav__link--active' : ''}`}>
+            contact
+          </Link>
         </li>
       </ul>
     </nav>

@@ -10,11 +10,19 @@ import {
   Route
 } from 'react-router-dom';
 
+import { useState } from 'react';
+
 function App() {
+  const [link, setLink] = useState('home');
+
+  function changeLink(newLink) {
+    setLink(newLink);
+  }
+  
   return (
     <Router>
       <div className="app">
-        <Nav />
+        <Nav link={link} changeLink={changeLink}/>
         <Switch>
           <Route path="/projects">
             <Projects />
