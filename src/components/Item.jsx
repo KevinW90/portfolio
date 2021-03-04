@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -31,6 +32,14 @@ function Item({page, display}) {
             <ProjectItem
               key={data.title}
               {...data}
+            />
+          )
+        }
+        else {
+          return (
+            <ContactItem
+              key={data.color}
+              badge={badge}
             />
           )
         }
@@ -115,5 +124,61 @@ function ProjectItem({img, title, link, text, labels}) {
 }
 
 function ContactItem({badge}) {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
 
+  function updateForm({target: {name, value}}) {
+    setForm({
+      ...form,
+      [name]: value
+    })
+  }
+
+  return (
+    <div className="item">
+      <Badge {...badge} />
+      <div className="item__text">
+        <form>
+          <label htmlFor="name">
+            Name
+            <input
+              name="name"
+              type="text"
+              value={form.name}
+              onChange={updateForm}
+            />
+          </label>
+
+          <label htmlFor="email">
+            Email
+            <input
+              name="email"
+              type="text"
+              value={form.email}
+              onChange={updateForm}
+            />
+          </label>
+
+          <label htmlFor="message">
+            Message
+            <textarea
+              name="message"
+              rows='5'
+              value={form.message}
+              onChange={updateForm}
+            />
+          </label>
+
+          <input
+            className="cta"
+            type="submit"
+          />
+        </form>
+        
+      </div>
+    </div>
+  )
 }

@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: inherit;
+    flex-direction: inherit;
+    margin-bottom: 15px;
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background: #E5E5E5;
+    }
+  }
+}
