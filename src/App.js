@@ -31,7 +31,7 @@ function App() {
             <Contact />
           </Route>
           <Route path="/">
-            <Home />
+            <Home changeLink={changeLink}/>
           </Route>
         </Switch>
         <Footer />

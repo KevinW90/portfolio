@@ -9,7 +9,7 @@ import {
 
 import { Link } from 'react-router-dom';
 
-function Item({page, display}) {
+function Item({page, display, changeLink}) {
   let badge;
 
   return (
@@ -31,6 +31,7 @@ function Item({page, display}) {
               badge={badge}
               text={data.text}
               ndx={ndx}
+              changeLink={changeLink}
             />
           )
         }
@@ -73,7 +74,7 @@ function Badge({color, icon, label}) {
   )
 }
 
-function HomeItem({badge, text, ndx}) {
+function HomeItem({badge, text, ndx, changeLink}) {
   return (
     <div className="item">
       <Badge {...badge} />
@@ -83,7 +84,8 @@ function HomeItem({badge, text, ndx}) {
         {ndx === 3
           ?
           <Link to="/contact">
-            <button className="cta">
+            <button className="cta"
+                    onClick={() => changeLink('contact')}>
               reach out
             </button>
           </Link>
