@@ -1,4 +1,9 @@
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -6,10 +11,6 @@
   padding: 2em;
   background: white;
   box-shadow: 0 3px 3px 0 rgba(black, .2);
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 5;
 
   &__menu {
     all: initial;
