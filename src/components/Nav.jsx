@@ -2,6 +2,8 @@ import '../styles/Nav.scss';
 
 import LOGO from '../assets/LOGO.svg';
 
+import { Link } from 'react-router-dom';
+
 function Nav() {
   return (
     <nav className="nav">
@@ -11,13 +13,13 @@ function Nav() {
 
       <ul className="nav__menu">
         <li className="nav__item">
-          <a className="nav__link" href='#'>home</a>
+          <Link to="/" className="nav__link">home</Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href='#'>projects</a>
+          <Link to="/projects" className="nav__link">projects</Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href='#'>contact</a>
+          <Link to="/contact" className="nav__link">contact</Link>
         </li>
       </ul>
     </nav>
