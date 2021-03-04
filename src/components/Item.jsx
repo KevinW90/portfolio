@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub,
+  faLinkedinIn,
+  faDiscord
+} from '@fortawesome/free-brands-svg-icons';
 
 function Item({page, display}) {
   let badge;
@@ -170,14 +175,21 @@ function ContactItem({badge}) {
               value={form.message}
               onChange={updateForm}
             />
+            <p className="req-text">All fields required</p>
           </label>
+          
 
           <input
             className="cta"
             type="submit"
           />
         </form>
-        
+
+        <div className="social">
+          <FontAwesomeIcon className="social__icon" icon={faGithub} />
+          <FontAwesomeIcon className="social__icon" icon={faLinkedinIn} />
+          <FontAwesomeIcon className="social__icon" icon={faDiscord} />
+        </div>
       </div>
     </div>
   )

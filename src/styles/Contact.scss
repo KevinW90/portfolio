@@ -13,5 +13,24 @@ form {
       border: none;
       background: #E5E5E5;
     }
+
+    .req-text {
+      margin-top: 0;
+      font-size: .8rem;
+      color: #898989;
+      text-align: right;
+    }
+  }
+
+  .cta {
+    margin-top: 0;
+  }
+}
+
+.social {
+  margin-top: 10px;
+
+  &__icon {
+    margin-right: 10px;
   }
 }
