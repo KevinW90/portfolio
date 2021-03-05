@@ -153,7 +153,8 @@ function ContactItem({badge}) {
     <div className="item">
       <Badge {...badge} />
       <div className="item__text">
-        <form>
+        <form action="https://formspree.io/f/xnqgwdbv"
+              method="POST">
           <label htmlFor="name">
             Name
             <input
