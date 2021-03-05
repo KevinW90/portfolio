@@ -193,9 +193,15 @@ function ContactItem({badge}) {
         </form>
 
         <div className="social">
-          <FontAwesomeIcon className="social__icon" icon={faGithub} />
-          <FontAwesomeIcon className="social__icon" icon={faLinkedinIn} />
-          <FontAwesomeIcon className="social__icon" icon={faDiscord} />
+          <Link to={{ pathname: "https://github.com/KevinW90" }} target="_blank">
+            <FontAwesomeIcon className="social__icon" icon={faGithub} />
+          </Link>
+          <Link to={{ pathname: "https://www.linkedin.com/in/kevin-quito-williams/" }} target="_blank">
+            <FontAwesomeIcon className="social__icon" icon={faLinkedinIn} />
+          </Link>
+          <Link to={{ pathname: "https://github.com/KevinW90" }} target="_blank">
+            <FontAwesomeIcon className="social__icon" icon={faDiscord} />
+          </Link>
         </div>
       </div>
     </div>
