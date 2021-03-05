@@ -74,7 +74,7 @@ function Badge({color, icon, label}) {
   )
 }
 
-function HomeItem({badge, text, ndx, changeLink}) {
+function HomeItem({badge, text, ndx}) {
   return (
     <div className="item">
       <Badge {...badge} />
@@ -84,8 +84,7 @@ function HomeItem({badge, text, ndx, changeLink}) {
         {ndx === 3
           ?
           <Link to="/contact">
-            <button className="cta"
-                    onClick={() => changeLink('contact')}>
+            <button className="cta">
               reach out
             </button>
           </Link>

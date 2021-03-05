@@ -2,9 +2,9 @@ import '../styles/Nav.scss';
 
 import LOGO from '../assets/LOGO.svg';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function Nav({link, changeLink}) {
+function Nav() {
   return (
     <nav className="nav">
       <div className="nav__logo">
@@ -13,25 +13,26 @@ function Nav({link, changeLink}) {
 
       <ul className="nav__menu">
         <li className="nav__item" >
-          <Link to="/" 
-                className={`nav__link ${link === 'home' ? 'nav__link--active' : ''}`} 
-                onClick={() => changeLink('home')}>
+          <NavLink exact
+                   to="/" 
+                   className="nav__link"
+                   activeClassName='nav__link--active'>
             home
-          </Link>
+          </NavLink>
         </li>
-        <li className="nav__item" onClick={() => changeLink('projects')}>
-          <Link to="/projects" 
-                className="nav__link"
-                className={`nav__link ${link === 'projects' ? 'nav__link--active' : ''}`}>
+        <li className="nav__item">
+          <NavLink to="/projects" 
+                   className="nav__link"
+                   activeClassName='nav__link--active'>
             projects
-          </Link>
+          </NavLink>
         </li>
-        <li className="nav__item" onClick={() => changeLink('contact')}>
-          <Link to="/contact" 
-                className="nav__link"
-                className={`nav__link ${link === 'contact' ? 'nav__link--active' : ''}`}>
+        <li className="nav__item">
+          <NavLink to="/contact" 
+                   className="nav__link"
+                   activeClassName='nav__link--active'>
             contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

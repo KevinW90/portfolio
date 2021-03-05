@@ -5,10 +5,10 @@ import { faUser,
 
 import Item from './Item';
 
-function Home({changeLink}) {
+function Home() {
   return (
     <div className="home main-page">
-      <Item {...data} changeLink={changeLink}/>
+      <Item {...data} />
     </div>
     
   )
