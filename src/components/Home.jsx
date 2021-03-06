@@ -10,7 +10,6 @@ function Home() {
     <div className="home main-page">
       <Item {...data} />
     </div>
-    
   )
 }
 
