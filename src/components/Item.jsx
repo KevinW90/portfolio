@@ -112,12 +112,15 @@ function ProjectItem({img, title, link, text, labels}) {
 
       <div className="project-item__words">
         <span className="project-item__title">
-          {title} 
-          {link && 
-            <FontAwesomeIcon 
-              className="project-item__icon" 
-              icon={faExternalLinkAlt} />
-          }
+          <Link to={{ pathname: link }} target="_blank">
+            {title} 
+            {link && 
+              <FontAwesomeIcon 
+                className="project-item__icon" 
+                icon={faExternalLinkAlt} 
+              />
+            }
+          </Link>
         </span>
         
         <p 

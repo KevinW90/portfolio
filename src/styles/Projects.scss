@@ -39,4 +39,12 @@
     margin-right: 10px;
     font-family: 'Truculenta', sans-serif;
   }
+
+  a {
+    color: black;
+
+    &:hover {
+      color: #7018A7;
+    }
+  }
 }
