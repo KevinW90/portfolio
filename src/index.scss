@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 
-html, body, #root, .app {
+html, body, #root {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-.app {
+#root {
   background: #f1f1f1;
   overflow-y: scroll;
 }
@@ -18,7 +18,8 @@ html, body, #root, .app {
 
 .item {
   margin-top: 50px;
-  position: relative;
+  // position: relative;
+  grid-column: 2 / span 1;
 
   &__badge {
     transform: scale(2);
@@ -107,14 +108,20 @@ html, body, #root, .app {
     font-size: 1.2rem;
   }
 
-  &__img {
-    position: absolute;
-    top: -50px;
-  }
+  // &__img {
+  //   position: absolute;
+  //   top: -50px;
+  // }
 }
 
 .main-page {
-  padding: 50px 30px;
+  padding: 5em 0 0;
+  display: grid;
+  grid-template-columns: 2em 3fr 2em;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 2fr 3fr 2fr;
+  }
 }
 
 .cta {
