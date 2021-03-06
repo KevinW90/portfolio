@@ -132,6 +132,11 @@ html, body, #root {
   border: none;
   border-radius: 10px;
   color: white;
+  
+  &:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
 }
 
 .footer {
@@ -143,4 +148,8 @@ html, body, #root {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    color: #7018A7;
+  }
 }
