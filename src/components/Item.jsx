@@ -163,6 +163,7 @@ function ContactItem({badge}) {
               type="text"
               value={form.name}
               onChange={updateForm}
+              required
             />
           </label>
 
@@ -173,6 +174,7 @@ function ContactItem({badge}) {
               type="text"
               value={form.email}
               onChange={updateForm}
+              required
             />
           </label>
 
@@ -183,6 +185,7 @@ function ContactItem({badge}) {
               rows='5'
               value={form.message}
               onChange={updateForm}
+              required
             />
             <p className="req-text">All fields required</p>
           </label>
