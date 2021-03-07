@@ -99,7 +99,6 @@ function HomeItem({badge, text, ndx}) {
 }
 
 function ProjectItem({img, title, link, text, labels}) {
-  console.log(img);
   return (
     <div className="project-item">
       <div>
