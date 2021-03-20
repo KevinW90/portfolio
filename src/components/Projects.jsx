@@ -57,7 +57,7 @@ const data = {
       text: `
         A website designed for my Discord server where I mentor 
         new programming students. It’s still in the development 
-        phase, but you can <a>join the server</a> to access some 
+        phase, but you can <a href="https://discord.gg/hDtqsZvUuT" target="_blank">join the server</a> to access some 
         articles I’ve designed as well. Look at the pinned 
         messages in the code-help channel.
       `,

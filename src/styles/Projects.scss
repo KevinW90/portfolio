@@ -41,10 +41,11 @@
   }
 
   a {
-    color: black;
+    color: #7018A7;
 
     &:hover {
-      color: #7018A7;
+      filter: brightness(50%);
+      cursor: pointer;
     }
   }
 }
